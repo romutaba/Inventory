@@ -1,0 +1,136 @@
+
+	{% load staticfiles %}
+
+	<!DOCTYPE html>
+
+	<head>
+
+	    <meta charset="utf-8"/>
+	    
+
+	    <title>Ray's Inv</title>
+
+	    <!-- Core CSS - Include with every page -->
+		<link href="{% static 'css/all.css' %}" rel="stylesheet"/>
+		<link href="{% static 'css/improved.css' %}" rel="stylesheet"/>
+		  <script src = "{% static 'js/base.min.js' %}"></script>
+	    <!--<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">-->
+		<link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet">
+	</head>
+
+	<body class="no_col_2">
+	<div id="site">
+	 <div id="header" role="banner">
+		<h3 id="site_name" class="reset"><a href="#">Ray's Inv</a></h3>
+		<p id="print_logo"><img src="{% static 'images/logo.jpg' %}" width="207" height="124" alt="" /></p>
+		<div class="inner">
+			<h3 class="hidden">Quick Links</h3>
+			<ul id="quick_links" class="reset menu">
+				<li><a href="#">My Account</a></li>
+				<li><a href="#">Order Status</a></li>
+				<li><a href="/logout">Logout</a></li>
+			</ul>
+
+			<form action="#" method="get" id="quick_search" role="search">
+				<fieldset>
+					<legend class="hidden">Search Rays's Inv</legend>
+					<label for="quickSearch" class="hidden">Search</label>
+					<input type="search" id="quickSearch" class="text white" placeholder="Find Items&hellip;" />
+					<span class="btn_icon icon_search"><input type="submit" value="Search" /></span>
+				</fieldset>
+			</form>
+
+			<p id="offer">This weeks target over Ksh.750000!</p>
+		</div>
+	</div>
+
+	 <div id="nav_main" role="navigation" class="reset menu pull_out">
+		<h3 class="hidden">Main Navigation</h3>
+		  <ul>
+			<li><a href="#"><span>Home</span></a></li>
+			<li>
+			<a href="#" class="parent"><span>Inventory</span></a>
+			<div class="single_column">
+				<ul>
+					<li><a href="#">Brands</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Categories</a></li>
+				</ul>
+			</div>
+			</li>
+			<li><a href="#" class="parent"><span>Orders</span></a>
+			<div class="single_column">
+				<ul>
+					<li><a href="#">Orders</a></li>
+					<li><a href="#">Order Details</a></li>
+				</ul>
+			</div>
+			</li>
+			<li><a href="#"><span>Reports</span></a></li>
+			<li><a href="#"><span>Stats</span></a></li>
+			<li><a href="#"><span>Payroll</span></a></li>
+
+		  </ul>
+	  </div>
+		<div id="content">
+			<div id="col_1" role="main">
+				<h1>Powerful Inventory Features, Artfully Arranged</h1>
+					<div id="feature" class="feature_slider pull_out lg_margin" data-interval="20">
+						<div class="inner">
+							<ul class="reset slider">
+								<li id="feature-1">
+									<a href="#" class="tile">
+									<p class="overlay large">It must be Spring! Delicate daffodils have arrived!</p>
+									<p class="overlay price">Hardwork Pays</p>
+										<img src="{% static 'images/Invent_logo_resized.jpg' %}" width="980" height="410" alt="" />
+									</a>
+								</li>
+								<li id="feature-2">
+									<a href="#" class="tile">
+									<p class="overlay large">Beautiful arrangements for any occasion.</p>
+									<p class="overlay price">Starting at $45.95</p>
+										<img src="{% static 'images/daffodils.jpg' %}" width="980" height="410" alt="White Rose Arrangement" />
+									</a>
+								</li>
+								<li id="feature-3">
+									<a href="#" class="tile">
+									<p class="overlay large">Every party needs a splash of color!</p>
+									<p class="overlay price">Starting at $39.95</p>
+										<img src="{% static 'images/rose_yellow_resized.jpg' %}" width="980" height="410" alt="White Rose Arrangement" />
+									</a>
+								</li>
+								<li id="feature-3">
+									<a href="#" class="tile">
+									<p class="overlay large">Every party needs a splash of color!</p>
+									<p class="overlay price">Starting at $39.95</p>
+										<img src="{% static 'images/rose_red_resized.jpg' %}" width="980" height="410" alt="White Rose Arrangement" />
+									</a>
+								</li>
+							</ul>
+							
+						</div>
+					</div>
+					<div class="section">
+						{% block content %}
+						{% endblock %}
+					</div>
+			</div>
+			
+		</div>
+		<div id="footer">
+					<p id="copyright" class="reset pull_out padding" role="contentinfo"><a href="#">&copy; 2016 Ray's Inv</a></p>
+			</div>
+
+	    <!-- Core Scripts - Include with every page -->
+	    <script src = "{% static 'js/jquery.min.js' %}"></script>
+        <script src = "{% static 'js/plugins.min.js' %}"></script>
+		<script src = "{% static 'js/all.js' %}"></script>
+		<script src = "{% static 'js/improved.js' %}"></script>
+
+
+	    {% block javascript %}
+	    {% endblock %}
+		
+	</body>
+
+	</html>
